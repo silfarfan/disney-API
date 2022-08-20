@@ -32,4 +32,15 @@ public class PersonajeEntity {
     private List<PeliculaEntity> peliculas = new ArrayList<>();
 
 
+    public PersonajeEntity() {
+    }
+
+    public PersonajeEntity(Long id, String nombre, String imagen, int edad, int peso, String historia) {
+        this.id = id;
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.edad = edad;
+        this.peso = peso;
+        this.historia = historia;
+    }
 }

@@ -30,6 +30,7 @@ public class PeliculaEntity {
 
     private int calificacion;
 
+
     @ManyToMany(
             cascade = {
                     CascadeType.PERSIST,
@@ -51,4 +52,16 @@ public class PeliculaEntity {
             joinColumns = @JoinColumn(name = "pelicula_id"),
             inverseJoinColumns = @JoinColumn(name = "personaje_id"))
     private Set<PersonajeEntity> personajes = new HashSet<>();
+
+
+    public PeliculaEntity() {
+    }
+
+    public PeliculaEntity(Long id, String titulo, String imagen, LocalDate fechaCreacion, int calificacion) {
+        this.id = id;
+        this.titulo = titulo;
+        this.imagen = imagen;
+        this.fechaCreacion = fechaCreacion;
+        this.calificacion = calificacion;
+    }
 }

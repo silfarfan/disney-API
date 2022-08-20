@@ -25,4 +25,12 @@ public class GeneroEntity {
     @ManyToMany(mappedBy = "generos", cascade = CascadeType.ALL)
     private List<PeliculaEntity> peliculas = new ArrayList<>();
 
+    public GeneroEntity(){
+    }
+
+    public GeneroEntity(Long id, String nombre, String imagen) {
+        this.id = id;
+        this.nombre = nombre;
+        this.imagen = imagen;
+    }
 }
